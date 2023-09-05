@@ -1,8 +1,12 @@
-/* grid within the ordered list */
 ol {
   grid-area: buttons;
   justify-self: start;
-  list-style-type: none;
+
+  /* counter */
+  list-style: none;
+  counter-reset: insideButton;
+
+  /* grid for buttons within the ordered list*/
   display: grid;
   grid-template: repeat(3, min-content) / repeat(3, min-content);
   column-gap: 10px;
@@ -12,6 +16,22 @@ ol {
 button {
   height: 3rem;
   width: 7rem;
+}
+
+li {
+  counter-increment: insideButton;
+}
+
+.btn-row-1 button::before {
+  content: counter(insideButton, decimal) ". ";
+}
+
+.btn-row-2 button::before {
+  content: counter(insideButton, upper-roman) ") ";
+}
+
+.btn-row-3 button::before {
+  content: "[0" counter(insideButton, decimal) "] ";
 }
 
 /* grid for the main page layout */
