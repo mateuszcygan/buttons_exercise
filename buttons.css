@@ -1,6 +1,21 @@
+/* grid within the ordered list */
+ol {
+  grid-area: buttons;
+  justify-self: start;
+  list-style-type: none;
+  display: grid;
+  grid-template: repeat(3, min-content) / repeat(3, min-content);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+button {
+  height: 3rem;
+  width: 7rem;
+}
+
+/* grid for the main page layout */
 .container {
-    display: grid;
-    grid-template: 3rem 3rem 3rem / 9rem 9rem 9rem;
-    column-gap: 20px;
-    row-gap: 10px;
+  display: grid;
+  grid-template: "... buttons" auto / 1fr 1fr;
 }
