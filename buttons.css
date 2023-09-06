@@ -1,3 +1,8 @@
+/*
+link to the video:
+https://vimeo.com/787311020/559a4d83cc
+*/
+
 ol {
   grid-area: buttons;
   justify-self: start;
@@ -9,8 +14,8 @@ ol {
   /* grid for buttons within the ordered list*/
   display: grid;
   grid-template: repeat(3, min-content) / repeat(3, min-content);
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 2rem;
+  row-gap: 1rem;
 }
 
 button {
@@ -38,4 +43,35 @@ li {
 .container {
   display: grid;
   grid-template: "... buttons" auto / 1fr 1fr;
+}
+
+/* two buttons with different colors */
+#yellow {
+  background-color: goldenrod;
+}
+
+#yellow:hover {
+  background-color: green;
+  color: lightgoldenrodyellow;
+}
+
+#green {
+  background-color: limegreen;
+  color: lightgoldenrodyellow;
+}
+
+#green:hover {
+  background-color: royalblue;
+  color: black;
+}
+
+/* all buttons */
+button {
+  border: none;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
 }
